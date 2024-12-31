@@ -30,21 +30,21 @@ else
 fi
 
 # Termux packages configuration.
-TERMUX_APP_PACKAGE="com.termux"
-TERMUX_BASE_DIR="/data/data/${TERMUX_APP_PACKAGE}/files"
-TERMUX_CACHE_DIR="/data/data/${TERMUX_APP_PACKAGE}/cache"
-TERMUX_ANDROID_HOME="${TERMUX_BASE_DIR}/home"
-TERMUX_APPS_DIR="${TERMUX_BASE_DIR}/apps"
-TERMUX_PREFIX_CLASSICAL="${TERMUX_BASE_DIR}/usr"
-TERMUX_PREFIX="${TERMUX_PREFIX_CLASSICAL}"
-TERMUX_ETC_PREFIX_DIR_PATH="${TERMUX_PREFIX}/etc"
-TERMUX_PROFILE_D_PREFIX_DIR_PATH="${TERMUX_ETC_PREFIX_DIR_PATH}/profile.d"
-TERMUX_CONFIG_PREFIX_DIR_PATH="${TERMUX_ETC_PREFIX_DIR_PATH}/termux"
-TERMUX_BOOTSTRAP_CONFIG_DIR_PATH="${TERMUX_CONFIG_PREFIX_DIR_PATH}/bootstrap"
+export TERMUX_APP_PACKAGE="com.termux"
+export TERMUX_BASE_DIR="/data/user/12/${TERMUX_APP_PACKAGE}/files"
+export TERMUX_CACHE_DIR="/data/user/12/${TERMUX_APP_PACKAGE}/cache"
+export TERMUX_ANDROID_HOME="${TERMUX_BASE_DIR}/home"
+export TERMUX_APPS_DIR="${TERMUX_BASE_DIR}/apps"
+export TERMUX_PREFIX_CLASSICAL="${TERMUX_BASE_DIR}/usr"
+export TERMUX_PREFIX="${TERMUX_PREFIX_CLASSICAL}"
+export TERMUX_ETC_PREFIX_DIR_PATH="${TERMUX_PREFIX}/etc"
+export TERMUX_PROFILE_D_PREFIX_DIR_PATH="${TERMUX_ETC_PREFIX_DIR_PATH}/profile.d"
+export TERMUX_CONFIG_PREFIX_DIR_PATH="${TERMUX_ETC_PREFIX_DIR_PATH}/termux"
+export TERMUX_BOOTSTRAP_CONFIG_DIR_PATH="${TERMUX_CONFIG_PREFIX_DIR_PATH}/bootstrap"
 
 # Path to CGCT tools
-CGCT_DEFAULT_PREFIX="/data/data/com.termux/files/usr/glibc"
-export CGCT_DIR="/data/data/com.termux/cgct"
+CGCT_DEFAULT_PREFIX="/data/user/12/com.termux/files/usr/glibc"
+export CGCT_DIR="/data/user/12/com.termux/cgct"
 
 # Package name for the packages hosted on the repo.
 # This must only equal TERMUX_APP_PACKAGE if using custom repo that

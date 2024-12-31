@@ -266,7 +266,7 @@ run_package_postinst_maintainer_scripts() {
 
 
 
-	elif [ ${TERMUX_PACKAGE_MANAGER} = "pacman" ]; then
+	elif [ "${TERMUX_PACKAGE_MANAGER}" = "pacman" ]; then
 		# - https://wiki.archlinux.org/title/PKGBUILD#install
 		# - https://gitlab.archlinux.org/pacman/pacman/-/blob/v6.1.0/lib/libalpm/add.c#L638-L647
 		if [ -d "${TERMUX_PREFIX}/var/lib/pacman/local" ]; then

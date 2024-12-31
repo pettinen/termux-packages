@@ -31,7 +31,7 @@ TERMUX_ARCHITECTURES=("${TERMUX_DEFAULT_ARCHITECTURES[@]}")
 
 TERMUX_PACKAGES_DIRECTORY="/home/builder/termux-packages"
 TERMUX_BUILT_DEBS_DIRECTORY="$TERMUX_PACKAGES_DIRECTORY/output"
-TERMUX_BUILT_PACKAGES_DIRECTORY="/data/data/.built-packages"
+TERMUX_BUILT_PACKAGES_DIRECTORY="/data/user/12/.built-packages"
 
 IGNORE_BUILD_SCRIPT_NOT_FOUND_ERROR=1
 FORCE_BUILD_PACKAGES=0
@@ -424,39 +424,11 @@ main() {
 
 		# Core utilities.
 		PACKAGES+=("bash") # Used by `termux-bootstrap-second-stage.sh`
-		PACKAGES+=("bzip2")
 		if ! ${BOOTSTRAP_ANDROID10_COMPATIBLE}; then
 			PACKAGES+=("command-not-found")
 		else
 			PACKAGES+=("proot")
 		fi
-		PACKAGES+=("coreutils")
-		PACKAGES+=("dash")
-		PACKAGES+=("diffutils")
-		PACKAGES+=("findutils")
-		PACKAGES+=("gawk")
-		PACKAGES+=("grep")
-		PACKAGES+=("gzip")
-		PACKAGES+=("less")
-		PACKAGES+=("procps")
-		PACKAGES+=("psmisc")
-		PACKAGES+=("sed")
-		PACKAGES+=("tar")
-		PACKAGES+=("termux-exec")
-		PACKAGES+=("termux-keyring")
-		PACKAGES+=("termux-tools")
-		PACKAGES+=("util-linux")
-
-		# Additional.
-		PACKAGES+=("ed")
-		PACKAGES+=("debianutils")
-		PACKAGES+=("dos2unix")
-		PACKAGES+=("inetutils")
-		PACKAGES+=("lsof")
-		PACKAGES+=("nano")
-		PACKAGES+=("net-tools")
-		PACKAGES+=("patch")
-		PACKAGES+=("unzip")
 
 		# Handle additional packages.
 		for add_pkg in "${ADDITIONAL_PACKAGES[@]}"; do

@@ -29,8 +29,8 @@ declare -A REPO_BASE_URLS=(
 )
 
 # The package manager that will be installed in bootstrap.
-# The default is 'apt'. Can be changed by using the '--pm' option.
-TERMUX_PACKAGE_MANAGER="apt"
+# The default is 'pacman'. Can be changed by using the '--pm' option.
+TERMUX_PACKAGE_MANAGER="pacman"
 
 # The repository base url for package manager.
 # Can be changed by using the '--repository' option.
