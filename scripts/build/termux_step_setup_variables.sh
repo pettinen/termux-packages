@@ -20,7 +20,7 @@ termux_step_setup_variables() {
 		if [ "$TERMUX_ON_DEVICE_BUILD" = "true" ] && [ -n "${TERMUX_APP_PACKAGE_MANAGER-}" ]; then
 			TERMUX_PACKAGE_FORMAT="$([ "${TERMUX_APP_PACKAGE_MANAGER-}" = "apt" ] && echo "debian" || echo "${TERMUX_APP_PACKAGE_MANAGER-}")"
 		else
-			TERMUX_PACKAGE_FORMAT="debian"
+			TERMUX_PACKAGE_FORMAT="pacman"
 		fi
 	fi
 
@@ -58,7 +58,7 @@ termux_step_setup_variables() {
 			fi
 		fi
 	else
-		TERMUX_BUILT_PACKAGES_DIRECTORY="/data/data/.built-packages"
+		TERMUX_BUILT_PACKAGES_DIRECTORY="/data/user/12/.built-packages"
 	fi
 
 	# TERMUX_PKG_MAINTAINER should be explicitly set in build.sh of the package.
